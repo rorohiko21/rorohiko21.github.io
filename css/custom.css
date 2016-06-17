@@ -8,9 +8,7 @@
     5. SERVICE
     6. PORTFOLIO
     7. TEAM
-    8. PRICE TABLES
     9. PROCESS
-    10. CLIENTS
     11. FACTS
     12. CONTACT    
     13. FOOTER
@@ -26,6 +24,7 @@
 	    font-size: 50px;
 	    text-transform: uppercase;
 	    text-align: center;
+        padding-top: 70px;
     }
     
     h2 {
@@ -58,12 +57,15 @@
         font-family: monospace;
 	}
 
+    .contact-us-header-text {
+        padding-top: 100px;
+    }
 
     /* 2. NAVBAR
     -------------------------------------------------- */
 
     .navbar {
-        min-height: 80px;    
+        min-height: 80px; 
     }
 
     .navbar-roro {
@@ -110,13 +112,19 @@
 
     .navbar-inverse .navbar-nav > li > a {
         font-size: 18px;
-        font-family: monospace;
-        font
-        color: #fff;
+        font-family: sans-serif;
+        color: #eee;
     }
-    .navbar-inverse .navbar-nav > li > a:hover,
+    
+    .navbar-inverse .navbar-nav > li > a:hover {
+        color: #fff;
+        background-color: transparent;
+    }
+
     .navbar-inverse .navbar-nav > li > a:focus {
-        color: #cccccc;
+        color: #FFDA44;
+        font-size: 18px;
+        font-family: sans-serif;
         background-color: transparent;
     }
 
@@ -134,11 +142,38 @@
 
     #top-slider {
     	width: 100%;
-    	height: 710px;
+        height: 714px;
      	text-align: center;
     	z-index: 100;
+        position: relative;
     }
-    
+
+    #top-slider .slider-bg {
+        width: 100%;
+        height: 714px; 
+        background-image:url(../img/top_section_bg.jpg);
+        background-repeat: no-repeat;
+    	position: fixed;
+    	z-index: 100;
+        top: 90px;
+        background-size: cover;
+    }
+
+    /*CSS for serving the retina image to devices with a high "device-pixel-ratio":*/
+    @media	
+    only screen and (-webkit-min-device-pixel-ratio: 1.3),
+    only screen and (-o-min-device-pixel-ratio: 13/10),
+    only screen and (-moz-min-device-pixel-ratio: 1.5),
+    only screen and (min-resolution: 120dpi),
+    only screen and (min-resolution: 1.5dppx) {
+        
+        /* Top Slider */
+        #top-slider .slider-bg {
+            background-size: cover;
+            background-image: url(../img/top_section_bg@2x.jpg);
+        }
+	}
+
     .logo {
         margin: 0 auto;
         margin-top: 170px;
@@ -154,6 +189,19 @@
         padding-right: 20%;
     }
 
+
+    #vertical-center {
+        padding-top: 200px;
+        padding-left: 200px
+    }
+
+
+    @media only screen and (max-width: 767px) {
+        #vertical-center {
+            padding-top: 150px;
+            padding-left: 100px;
+        }
+    }
 
     /* 4. ABOUT US
     -------------------------------------------------- */
@@ -375,7 +423,6 @@
    /* Icons  */
     
     .icon-wrench, .icon-mobile {
-        background: url('../img/icon-bg.png') repeat-x center center;
         position: relative;
         display: inline-block;
         width: 147px;
@@ -386,7 +433,6 @@
     }
     
     .icon-desktop {
-        background: url('../img/icon-bg.png') repeat-x center center;
         position: relative;
         display: inline-block;
         width: 147px;
@@ -410,30 +456,22 @@
         text-transform: uppercase;
         font-size: 20px;
 	    padding: 10px 20px;
+        color: #eeeeee;
+        background-color: #3B7EB5;
+        border-color: #ffffff;
     }
 
     .btn-hire:hover,
     .btn-hire:focus,
     .open .dropdown-toggle.btn-primary {
-        color: #eeeeee;
-        background-color: #27ad60;
+        color: #fff;
+        background-color: #27496C;
         border-color: #ffffff;
     }
 
     /* 6. PORTFOLIO
     -------------------------------------------------- */
     
-    /* Filter */
-    
-    .filter-list ul{
-        text-align: center;
-    }
-    
-    .filter-list ul li {
-        margin-left: 5px;
-        cursor: pointer;
-    }
-
     /* images grid and hover effect */
     
     .gallery {
@@ -475,247 +513,6 @@
     
     .caption p {
 	    font-size: 12px;
-    }
-
-    /* 7. TEAM
-    -------------------------------------------------- */
-    
-    .team {
-	    margin: 0px 10px;
-	    padding: 30px 10px;
-	    -webkit-transition:  ease-out 0.6s;
-        -moz-transition: ease-out 0.6s;
-        -o-transition: ease-out 0.6s;
-        transition: ease-out 0.6s;
-    }
-
-    .job {
-        font-size: 12px;
-    }
-    
-    .team p {
-	    padding: 10px;
-    }
-    
-    .team:hover {
-	    -webkit-transition: all 0.6s linear;
-        -moz-transition: all 0.6s linear;
-        -o-transition: all 0.6s linear;
-        -ms-transition: all 0.6s linear;
-        transition: all 0.6s linear;
-    }
-    
-    .team:hover p {
-	    padding: 10px;
-    }  
-    
-   /* Team Member Images  */
-    
-    .member1 {
-        background: url('../img/team/1.jpg') center center no-repeat; /* YOUR IMAGE HERE */
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        position: relative;
-        display: inline-block;
-        width: 140px;
-        height: 140px;
-        padding-top: 25px;
-        border-radius: 50%;
-	    -webkit-border-radius: 50%;
-	    -moz-border-radius: 50%;
-    }
-    
-    .member2 {
-        background: url('../img/team/1.jpg') center center no-repeat; /* YOUR IMAGE HERE */
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        position: relative;
-        display: inline-block;
-        width: 140px;
-        height: 140px;
-        padding-top: 25px;
-        border-radius: 50%;
-	    -webkit-border-radius: 50%;
-	    -moz-border-radius: 50%;
-    }
-    
-    .member3 {
-        background: url('../img/team/1.jpg') center center no-repeat; /* YOUR IMAGE HERE */
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        position: relative;
-        display: inline-block;
-        width: 140px;
-        height: 140px;
-        padding-top: 25px;
-        border-radius: 50%;
-	    -webkit-border-radius: 50%;
-	    -moz-border-radius: 50%;
-    }
-    
-    .member4 {
-        background: url('../img/team/1.jpg') center center no-repeat; /* YOUR IMAGE HERE */
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        position: relative;
-        display: inline-block;
-        width: 140px;
-        height: 140px;
-        padding-top: 25px;
-        border-radius: 50%;
-	    -webkit-border-radius: 50%;
-	    -moz-border-radius: 50%;
-    }
-    
-    /* Team Member Hover Images  */
-    
-    .team-member1:hover > div {
-        background: url('../img/team/backside/1.jpg') center center no-repeat; /* YOUR IMAGE HERE */
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-	    -webkit-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        border-radius: 50%;
-	    -webkit-border-radius: 50%;
-	    -moz-border-radius: 50%;
-    }
-    
-    .team-member2:hover > div {
-        background: url('../img/team/backside/1.jpg') center center no-repeat; /* YOUR IMAGE HERE */
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-	    -webkit-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        border-radius: 50%;
-	    -webkit-border-radius: 50%;
-	    -moz-border-radius: 50%;
-    }
-    
-    .team-member3:hover > div {
-        background: url('../img/team/backside/1.jpg') center center no-repeat; /* YOUR IMAGE HERE */
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-	    -webkit-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        border-radius: 50%;
-	    -webkit-border-radius: 50%;
-	    -moz-border-radius: 50%;
-    }
-    
-    .team-member4:hover > div {
-        background: url('../img/team/backside/1.jpg') center center no-repeat; /* YOUR IMAGE HERE */
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-	    -webkit-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        border-radius: 50%;
-	    -webkit-border-radius: 50%;
-	    -moz-border-radius: 50%;
-    }
-    
-    /* TEAM MEMBER SOCIAL ICONS */
-    
-    .social-team a{
-	    padding: 0px 5px;
-    }
-    
-    .icon-social {
-        position: relative;
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-	    -webkit-border-radius: 50%;
-	    -moz-border-radius: 50%;
-    }
-
-    /* 8. PRICE
-    -------------------------------------------------- */
-    
-    .tables {
-	    padding-bottom: 60px;
-    }
-
-    .price-table {
-	    text-align: center;
-    	margin-bottom: 20px;
-	}
-	
-	.price-table:hover {
-      -webkit-transition: all 0.6s linear;
-      -moz-transition: all 0.6s linear;
-      -o-transition: all 0.6s linear;
-      -ms-transition: all 0.6s linear;
-      transition: all 0.6s linear;
-    }
-	
-	.price-table-body {
-		padding: 0px;
-		text-align: center;
-	}
-	
-	.price-table-heading h3 {
-	    font-weight: 400;
-	    font-size: 28px;
-	    line-height: 1em;
-	    padding: 30px;
-	    margin: 0;
-	}
-
-	.the-price {
-		padding: 20px;
-		margin: 0;
-	}
-	
-	.the-price h1 {
-	    font-size: 50px;
-		line-height: 1em;
-	    margin: 0;
-	}
-
-	.month
-	{
-	    font-size: 16px;
-	}
-	
-	.price-table-footer {
-		padding: 30px;
-	}
-	
-	.table-feature {
-		margin-top: -60px;
-		-webkit-transition:  ease-out 0.6s;
-        -moz-transition: ease-out 0.6s;
-        -o-transition: ease-out 0.6s;
-        transition: ease-out 0.6s;
-	}
-	
-	.table-feature:hover {
-       -webkit-transition: all 0.6s linear;
-       -moz-transition: all 0.6s linear;
-       -o-transition: all 0.6s linear;
-       -ms-transition: all 0.6s linear;
-       transition: all 0.6s linear;
     }
     
      /* 9. PROCESS
@@ -767,7 +564,6 @@
     }
     
     .process-img { 
-        background:url('../img/icon-bg.png') repeat-x center center;
         text-shadow: 1px -1px 0px rgba(0,0,0,0.5);
         position: relative;
         display: inline-block;
@@ -936,14 +732,14 @@
     }
     
     .contact-us-email {
-        color: #fff;
+        color: #ddd;
         font-size: 30px;
         font-style: italic;
         text-decoration: underline;
     }
     
     .contact-us-email:hover {
-        color: #ddd;
+        color: #fff;
         text-decoration: underline;
     }
 
@@ -1159,6 +955,11 @@
     @media only screen and (min-width: 1200px) {
     
     /* Top Slider */
+     #top-slider .slider-bg {
+        background-size: cover;
+    }
+        
+    /* Top Slider */
     
     .slider-caption {
 	    padding-top: 10px;
@@ -1170,7 +971,7 @@
         max-width: 200px;
         max-height: 200px;
     }
-    
+        
     /* About Us */
     
     .agency-image {
@@ -1277,7 +1078,32 @@
     	height: 600px;
      	text-align: center;
     	z-index: 100;
+        position: relative;
     }
+        
+    #top-slider .slider-bg {
+		position: fixed;
+		z-index: 100;
+        background: url(../img/top_section_bg_767.jpg) 0 0 no-repeat;
+		width: 100%;
+		height: 600px;
+        top: 80px;
+        background-size: cover;
+    }   
+        
+    /*CSS for serving the retina image to devices with a high "device-pixel-ratio":*/
+    @media	
+    only screen and (-webkit-min-device-pixel-ratio: 1.3),
+    only screen and (-o-min-device-pixel-ratio: 13/10),
+    only screen and (-moz-min-device-pixel-ratio: 1.5),
+    only screen and (min-resolution: 120dpi),
+    only screen and (min-resolution: 1.5dppx) {
+    
+        #top-slider .slider-bg {
+            background-size: cover;
+            background-image: url(../img/top_section_bg_767@2x.jpg);
+        }
+	}    
         
     .logo {
         margin: 0 auto;
@@ -1457,7 +1283,32 @@
     	height: 600px;
      	text-align: center;
     	z-index: 100;
+        position: relative;
     }
+        
+    #top-slider .slider-bg {
+		position: fixed;
+		z-index: 100;
+        background: url(../img/top_section_bg_379.jpg) center center no-repeat;
+		width: 100%;
+		height: 600px;
+        top: 80px;
+        background-size: cover;
+    }   
+        
+    /*CSS for serving the retina image to devices with a high "device-pixel-ratio":*/
+    @media	
+    only screen and (-webkit-min-device-pixel-ratio: 1.3),
+    only screen and (-o-min-device-pixel-ratio: 13/10),
+    only screen and (-moz-min-device-pixel-ratio: 1.5),
+    only screen and (min-resolution: 120dpi),
+    only screen and (min-resolution: 1.5dppx) {
+        
+        #top-slider .slider-bg {
+            background-size: cover;
+            background-image: url(../img/top_section_bg_379@2x.jpg);
+        }
+	}    
         
     .logo {
         margin: 0 auto;
@@ -1516,11 +1367,10 @@
     /* Social Media Divider */
     
     .social-icons {
-	    padding-top: 40px;
+	    padding-top: 120px;
     }
     
     #divider .divider-bg {
     	background: cover;
     }
-
-    }
+}
