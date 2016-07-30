@@ -39,7 +39,7 @@
 	
 	h4 {
 	    font-size: 22px;
-        font-family: sans-serif;
+        font-family: 'Roboto', sans-serif;
 	}
 	
 	h5 {
@@ -54,7 +54,7 @@
 		color: #fff;
 		text-align: center;
         font-size: 15px;
-        font-family: monospace;
+        font-family: 'Roboto', sans-serif;
 	}
 
     .contact-us-header-text {
@@ -139,7 +139,7 @@
 
     .navbar-inverse .navbar-nav > li > a {
         font-size: 18px;
-        font-family: sans-serif;
+        font-family: 'Roboto', sans-serif;
         color: #eee;
     }
     
@@ -151,7 +151,7 @@
     .navbar-inverse .navbar-nav > li > a:focus {
         color: #FFDA44;
         font-size: 18px;
-        font-family: sans-serif;
+        font-family: 'Roboto', sans-serif;
         background-color: transparent;
     }
 
@@ -218,7 +218,7 @@
 	    text-align: center;
 		color: #fff;
         margin-top: 80px;
-        font-family:monospace; 
+        font-family: 'Roboto', sans-serif;
         padding-left: 20%;
         padding-right: 20%;
     }
@@ -285,7 +285,7 @@
         text-align: left;
         margin-left: 2px;
         font-size: 14px;
-        font-family: monospace;
+        font-family: 'Roboto', sans-serif;
         margin-bottom: 5px;
     }
 
@@ -750,13 +750,13 @@
      /* 12. CONTACT
     -------------------------------------------------- */
     .contact-us-subheader {
-        font-family: monospace;
+        font-family: 'Roboto', sans-serif;
         font-size: 18px;
         margin-top: 100px;
     }
 
     .contact-us-closing-line {
-        font-family: monospace;
+        font-family: 'Roboto', sans-serif;
         font-size: 18px;
         margin-top: 80px;
     }
